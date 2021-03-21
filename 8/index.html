@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>To-Do List</title>
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Bowlby+One+SC" rel="stylesheet">
+    <style>
+        body {
+            background-color:rgb(37, 37, 37);
+            color: aliceblue;
+            padding: 2rem;
+            margin: 0;
+            font-family: 'Architects Daughter', cursive;
+            font-size: 12px;
+        }
+        h1 {
+            font-family: 'Bowlby One SC', cursive;
+            font-size: 2.8rem;
+            color: cornflowerblue;
+            margin: 0;
+        }
+        ol {
+            font-family: 'Architects Daughter', cursive;
+            font-size: 1.6rem;
+        }
+        .button {
+            border: none;
+            color: aliceblue;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+      }
+      .input {background-color: cornflowerblue;}
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <ol id="todoList">
+        <li>Check Mail</li>
+        <li>Write test for module1 minor project</li>
+        <li>Practice Time and work</li>
+        <li>Revise Heap</li>
+        <li>Revise BST</li>
+        <li>Solve Problems on Hash Table</li>
+    </ol>
+    <button class="button input" id="inputButton" type="button">Add a item</button>
+    <script>
+        // JavaScript here!
+        var todoList = document.getElementById("todoList");
+        var inputButton = document.getElementById("inputButton");
+        inputButton.addEventListener("click", addItem);
+
+        function addItem(){
+            var newTodo = prompt("Enter a Todo ");
+            console.log(newTodo);
+            if (newTodo != ""){
+                var newTodoElement = document.createElement('li');
+                newTodoElement.innerText = newTodo;
+                todoList.appendChild(newTodoElement);
+            }else{
+                console.log("NO name for work");
+            }
+            
+
+        }
+        
+
+
+    </script>
+</body>
+</html>

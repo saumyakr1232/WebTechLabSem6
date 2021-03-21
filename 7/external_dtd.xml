@@ -1,0 +1,7 @@
+<?xml version="1.0"?>  
+<!DOCTYPE employee SYSTEM "employee.dtd">  
+<employee>  
+  <firstname>saumya</firstname>  
+  <lastname>kumar</lastname>  
+  <email>saumya_kumar.btechscse@galgotiasuniversity.edu.in</email>  
+</employee> 
